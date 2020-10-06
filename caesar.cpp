@@ -3,6 +3,14 @@
 
 char shiftChar(char c, int rshift)
 {
+	if(rshift > 25)
+	{
+		rshift = (rshift % 25) - 1;
+	}
+	else if(rshift < -25)
+	{
+		rshift = (rshift % -25) + 1;
+	}
 	if(rshift < 0)
 	{
 		if((((int) c) >= 65 && ((int) c <= 90)))
