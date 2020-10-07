@@ -42,4 +42,5 @@ TEST_CASE("Tests decryptVigenere()")
 	CHECK(decryptVigenere("EIGIWQBGDIKXRPTCpoeccymtuvlixnni,!vytcxfstjoed lnfmbwtgoegfqmcwprroechgcudsasqlawifyq", "encryptalex") == "AVERYBIGSENTENCEaverybigsentence,!yugaghdajdag hadvdhagdajbdklyayrdafdtadfdhsfhdsvdhs");
 	CHECK(decryptVigenere("", "ballon") == "");
 	CHECK(decryptVigenere("Eranchh, qtsksis!&^)&*&Hrrrqhv", "passcode") == "Private, message!&^)&*&Encrypt");
+	CHECK(decryptVigenere("Keelsn amdlbss , clpss", "value") == "Petros abjhgsh , ihush");
 }
