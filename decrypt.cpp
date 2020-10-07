@@ -4,7 +4,7 @@
 
 std::string decryptCaesar(std::string ciphertext, int rshift)
 {
-	return encryptCaesar(ciphertext, (rshift * -1));
+	return encryptCaesar(ciphertext, (rshift * -1)); // calling encrypt caesar with hthe negative value of rshift to decrypt the ciphertext
 }
 
 std::string decryptVigenere(std::string ciphertext,std::string keyword)
