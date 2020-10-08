@@ -5,6 +5,16 @@
 #include "vigenere.h"
 #include "decrypt.h"
 
+TEST_CASE("Tests shiftChar"){
+  CHECK(shiftChar('g',5) == 'l');
+  CHECK(shiftChar('B',-1) == 'A');
+  CHECK(shiftChar('K',0) == 'K');
+  CHECK(shiftChar('E',-4) == 'A');
+  CHECK(shiftChar('a',32) == 'g');
+  CHECK(shiftChar('a',60) == 'i');
+  CHECK(shiftChar('a',-25) == 'b');
+}
+
 TEST_CASE("Tests encryptCaesar()")
 {
 	CHECK(encryptCaesar("Alexandros Aidonis!", 7) == "Hslehukyvz Hpkvupz!");
