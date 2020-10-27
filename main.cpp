@@ -3,6 +3,7 @@
 #include "caesar.h"
 #include "vigenere.h"
 #include "decrypt.h"
+#include "decode.h"
 
 int main()
 {
@@ -22,5 +23,7 @@ int main()
   std::cout << decryptCaesar("Hslehukyvz", 7) << "\n\n";
   std::cout << "decryptVigenere(Cccmtbfimh, Twfflxl, crypto)" << "\n\n";
   std::cout << decryptVigenere("Cccmtbfimh, Twfflxl", "crypto") << "\n\n";
+  std:: cout << "std::cout << decodeCaesar(Alzapun)" << "\n\n";
+  std::cout << decodeCaesar("Alzapun") << "\n\n";
   return 0;
 }

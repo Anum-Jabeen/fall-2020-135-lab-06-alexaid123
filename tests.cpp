@@ -4,6 +4,7 @@
 #include "caesar.h"
 #include "vigenere.h"
 #include "decrypt.h"
+#include "decode.h"
 
 TEST_CASE("Tests shiftChar"){
   CHECK(shiftChar('g',5) == 'l');
@@ -53,4 +54,13 @@ TEST_CASE("Tests decryptVigenere()")
 	CHECK(decryptVigenere("", "ballon") == "");
 	CHECK(decryptVigenere("Eranchh, qtsksis!&^)&*&Hrrrqhv", "passcode") == "Private, message!&^)&*&Encrypt");
 	CHECK(decryptVigenere("Keelsn amdlbss , clpss", "value") == "Petros abjhgsh , ihush");
+}
+
+TEST_CASE("Tests decodeCaesar()")
+{
+	CHECK(decodeCaesar("Hslehukyvz Hpkvupz!") == "Alexandros Aidonis!");
+	CHECK(decodeCaesar("DOCD drsc sc k docd") == "TEST this is a test");
+	CHECK(decodeCaesar("Verhsq Wirxirgi") == "Random Sentence");
+	CHECK(decodeCaesar("Yz pyncjaetzy vpj opncjaetzy") == "No encryption key decryption");
+	CHECK(decodeCaesar("Iv mtmxpivb eitsml qvbw bpm zwwu") == "An elephant walked into the room");
 }
