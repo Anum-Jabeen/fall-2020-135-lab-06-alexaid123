@@ -24,6 +24,7 @@ char shiftChar(char c, int rshift)
 	  return c;
 }
 
+//encrypts a string into Caesar cipher using the function shiftChar 
 std::string encryptCaesar(std::string plaintext, int rshift)
 {
 	if(rshift == 0)

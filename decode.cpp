@@ -3,6 +3,8 @@
 #include "decrypt.h"
 #include "funcs.h"
 
+//function decodes an encryted string using the frequency of each letter in the English alphabet
+
 std::string decodeCaesar(std::string encryptedString) {
 	std::string strings [26]; 
 	double distance[26] = {0}; 
